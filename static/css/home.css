@@ -1,4 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/led-digital-7');
+
 * {
     margin: 0;
     padding: 0;
@@ -141,10 +142,11 @@ body {
     padding: 0px 10px;
 }
 
-.deg{
+.deg {
     font-size: 40px;
 }
-.hum{
+
+.hum {
     font-size: 23px;
 }
 
@@ -379,22 +381,29 @@ body {
     padding: 4px;
     padding: 30px 0px;
 }
-.digital{
+
+.digital {
     font-family: 'Orbitron', sans-serif;
 }
-.fg{
+
+.fg {
     position: absolute;
     z-index: 10;
-    color: ;
 }
-#mychart3{
+
+.date {
+    font-weight: 500;
+    padding-left: 5px;
+}
+
+#mychart3 {
     position: relative;
 }
 
 .energy-consump-2 {
     font-size: 17px;
     margin-top: 100px;
-    padding:20px 0px;
+    padding: 20px 0px;
 }
 
 .battery-canvas {
@@ -404,12 +413,6 @@ body {
 .invertor-name {
     font-size: 12px;
 }
-
-
-
-
-
-
 
 
 /* .chart{
@@ -433,11 +436,13 @@ body {
 .box img {
     width: 35px;
     margin-left: -20px;
-    
+
 }
-.szc{
+
+.szc {
     text-align: left !important;
 }
+
 .box span {
     text-align: left !important;
     padding-left: -10px;
@@ -526,12 +531,14 @@ body {
     border-radius: 20px;
     margin: 6px 0px;
 }
-.dfh img{
+
+.dfh img {
     width: 15px;
     height: 15px;
-   
+
 }
-.dfh{
+
+.dfh {
     padding-left: -20px;
 }
 
@@ -569,18 +576,20 @@ body {
     font-size: 16x;
     font-weight: bold;
 }
-.xc{
-margin-left: 40px;
+
+.xc {
+    margin-left: 40px;
 }
 
 .leads :nth-child(2) {
     font-size: 15px !important;
 }
-.leads{
+
+.leads {
     text-align: left;
 }
 
-.xcc{
+.xcc {
     padding-left: 10px;
 }
 
@@ -751,10 +760,11 @@ margin-left: 40px;
 
 .current-watts-text {
     font-size: 14px;
-    
+
 
 }
-.precnt{
+
+.precnt {
     font-size: 24px;
     padding-left: 20px;
 }
