@@ -380,12 +380,12 @@ body {
     padding: 30px 0px;
 }
 .digital{
-    font-family: 'LED Digital 7',sans-serif!important;
+    font-family: 'Orbitron', sans-serif;
 }
 .fg{
     position: absolute;
     z-index: 10;
-    color: #000;
+    color: ;
 }
 #mychart3{
     position: relative;
@@ -607,8 +607,9 @@ margin-left: 40px;
 }
 
 .df {
-    width: 20px;
-    padding-left: 5px;
+    width: 24px;
+    margin-left: 5px;
+    margin-top: -5px;
 }
 
 .wifis img {
@@ -796,7 +797,7 @@ progress {
     color: lightblue;
 }
 
-progress::-webkit-progress-value {
+#file::-webkit-progress-value {
     background: #E74444;
 }
 
