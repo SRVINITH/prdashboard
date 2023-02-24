@@ -1,0 +1,936 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="{% static 'css/home.css'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- bootstrap css -->
+    <title>Tv Dashboard</title>
+</head>
+
+<body class="bg-dark">
+    <div class="container-fluid">
+        <div class="row mx-2">
+            <div class="col-md-3">
+                <div class="first-row">
+                    <div class="ftop mt-3">
+                        <h6 class="fs-5">November 1st Half</h6>
+                        <p class="f6">Top Sales Representative</p>
+                    </div>
+                    <div class="staffrepresent">
+                        <div class="staff-dp">
+                            <div class="">
+                                <img src="{% static 'images/staff-dp.png' %}" alt="staff-dp">
+                                <span class="staff-online active"></span>
+                            </div>
+                            <div class="staff-name">
+                                <p class="fs-5">AKHIL SANKAR K</p>
+                            </div>
+                        </div>
+                        <div class="points">
+                            <span class="text-point">43 Points</span>
+                            <span>+52 Points </span>
+                            <span class="rateing"> <img src="{% static 'images/rateing.svg' %}" alt="rateing"></span>
+                        </div>
+                    </div>
+                    <div class="staffrepresent">
+                        <div class="staff-dp">
+                            <div class="">
+                                <img src="{% static 'images/staff-dp.png' %}" alt="staff-dp">
+                                <span class="staff-online active"></span>
+                            </div>
+                            <div class="staff-name">
+                                <p class="fs-5">ANITHA K</p>
+                            </div>
+                        </div>
+                        <div class="points">
+                            <span class="text-point">43 Points</span>
+                            <span>+52 Points </span>
+                            <!-- <span class="rateing"> <img src="{% static 'images/rateing.svg' %}" alt="rateing" ></span> -->
+                        </div>
+                    </div>
+                    <div class="staffrepresent">
+                        <div class="staff-dp">
+                            <div class="">
+                                <img src="{% static 'images/staff-dp.png' %}" alt="staff-dp">
+                                <span class="staff-online active"></span>
+                            </div>
+                            <div class="staff-name">
+                                <p class="fs-5">BALASARAVANAN S</p>
+                            </div>
+                        </div>
+                        <div class="points">
+                            <span class="text-point text-warning">43 Points</span>
+                            <span class="">+52 Points </span>
+                            <!-- <span class="rateing"> <img src="{% static 'images/rateing.svg' %}" alt="rateing" ></span> -->
+                        </div>
+                    </div>
+                    <div class="staffrepresent">
+                        <div class="staff-dp">
+                            <div class="">
+                                <img src="{% static 'images/staff-dp.png' %}" alt="staff-dp">
+                                <span class="staff-online atvisit"></span>
+                            </div>
+                            <div class="staff-name">
+                                <p class="fs-5">GOWTHAM S</p>
+                            </div>
+                        </div>
+                        <div class="points">
+                            <span class="text-point text-warning ">43 Points</span>
+                            <span class="">+52 Points </span>
+                            <!-- <span class="rateing"> <img src="{% static 'images/rateing.svg' %}" alt="rateing" ></span> -->
+                        </div>
+                    </div>
+                    <div class="staffrepresent">
+                        <div class="staff-dp">
+                            <div class="">
+                                <img src="{% static 'images/staff-dp.png' %}" alt="staff-dp">
+                                <span class="staff-online atvisit"></span>
+                            </div>
+                            <div class="staff-name">
+                                <p class="fs-5">JEEVA S</p>
+                            </div>
+                        </div>
+                        <div class="points">
+                            <span class="text-point text-warning ">43 Points</span>
+                            <span>+52 Points </span>
+                            <!-- <span class="rateing"> <img src="{% static 'images/rateing.svg' %}" alt="rateing" ></span> -->
+                        </div>
+                    </div>
+                    <div class="staffrepresent">
+                        <div class="staff-dp">
+                            <div class="">
+                                <img src="{% static 'images/staff-dp.png' %}" alt="staff-dp">
+                                <span class="staff-online offline"></span>
+                            </div>
+                            <div class="staff-name">
+                                <p class="fs-5">JEEVANANDHAM N</p>
+                            </div>
+                        </div>
+                        <div class="points">
+                            <span class="text-point text-danger">43 Points</span>
+                            <span>+52 Points </span>
+                            <!-- <span class="rateing"> <img src="{% static 'images/rateing.svg' %}" alt="rateing" ></span> -->
+                        </div>
+                    </div>
+                    <div class="staffrepresent">
+                        <div class="staff-dp">
+                            <div class="">
+                                <img src="{% static 'images/staff-dp.png' %}" alt="staff-dp">
+                                <span class="staff-online offline"></span>
+                            </div>
+                            <div class="staff-name">
+                                <p class="fs-5">SANKAR C</p>
+                            </div>
+                        </div>
+                        <div class="points">
+                            <span class="text-point text-danger">43 Points</span>
+                            <span>+52 Points </span>
+                            <!-- <span class="rateing"> <img src="{% static 'images/rateing.svg' %}" alt="rateing" ></span> -->
+                        </div>
+                    </div>
+                    <div class="staffrepresent2">
+                        <center>
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-center ">
+                                        <div class="onliedot bg-success"></div>
+                                        <div class="act-online">Online<span>3</span></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-center">
+                                        <div class="onliedot bg-warning"></div>
+                                        <div class="act-online">AtVisit<span>3</span></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-center">
+                                        <div class="onliedot bg-danger"></div>
+                                        <div class="act-online">Offline<span>3</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </center>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="second-row">
+                    <center>
+                        <h1 class="my-3"><span class="text-danger">on</span>words <span
+                                class="dashboard">DASHBOARD</span></h1>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="projects-line">
+                                    <div class="row my-3">
+                                        <div class="col">
+                                            <div class="days-calculation">
+                                                <div class="days-first-col">
+                                                    <span class="days-count fs-2">24</span> <br>
+                                                    <span class="days-text fs-6 ">days left for project dobby</span>
+                                                    <span>
+                                                        <div class="progress mt-2">
+                                                            <div class="progress-bar bg-success" role="progressbar"
+                                                                style="width: 75%;" aria-valuenow="75" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                        </div>
+                                                    </span>
+                                                </div>
+                                                <div class="elips">
+                                                    <img src="{% static 'images/elips.png' %}" alt="">
+                                                    <span class="project"><img src="{% static 'images/project.svg' %}"
+                                                            alt=""></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="days-calculation">
+                                                <div class="days-first-col">
+                                                    <span class="days-count text-danger fs-2">10</span><br>
+                                                    <span class="days-text fs-6">days left for project dobby</span>
+                                                    <span>
+                                                        <div class="progress mt-2">
+                                                            <div class="progress-bar bg-success" role="progressbar"
+                                                                style="width: 75%;" aria-valuenow="75" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                        </div>
+                                                    </span>
+                                                </div>
+                                                <div class="elips">
+                                                    <img src="{% static 'images/elips.png' %}" alt="">
+                                                    <span class="project"><img src="{% static 'images/project.svg' %}"
+                                                            alt=""></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row my-3">
+                                        <div class="col">
+                                            <div class="days-calculation">
+                                                <div class="days-first-col">
+                                                    <span class="days-count text-danger fs-2">10</span><br>
+                                                    <span class="days-text fs-6">days left for project dobby</span>
+                                                    <span>
+                                                        <div class="progress mt-2">
+                                                            <div class="progress-bar bg-success" role="progressbar"
+                                                                style="width: 75%;" aria-valuenow="75" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                        </div>
+                                                    </span>
+                                                </div>
+                                                <div class="elips">
+                                                    <img src="{% static 'images/elips.png' %}" alt="elips">
+                                                    <span class="project"><img src="{% static 'images/project.svg' %}"
+                                                            alt=""></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="days-calculation">
+                                                <div class="days-first-col">
+                                                    <span class="days-count text-danger fs-2">10</span> <br>
+                                                    <span class="days-text fs-6">days left for project dobby</span>
+                                                    <span>
+                                                        <div class="progress mt-2">
+                                                            <div class="progress-bar bg-success" role="progressbar"
+                                                                style="width: 75%;" aria-valuenow="75" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                        </div>
+                                                    </span>
+                                                </div>
+                                                <div class="elips">
+                                                    <img src="{% static 'images/elips.png' %}" alt="elips">
+                                                    <span class="project"><img src="{% static 'images/project.svg' %}"
+                                                            alt=""></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row ">
+                                    <div class="col-md-12">
+                                        <div class="online-options">
+                                            <div class="online-option">
+                                                <div class="days-first-col">
+                                                    <span class="days-count fs-2">10</span><br>
+                                                    <span class="days-text fs-6">Absenties in Office</span>
+                                                    <span>
+
+                                                    </span>
+                                                </div>
+                                                <div class="elips">
+                                                    <img src="{% static 'images/elips.png' %}" alt="elips">
+                                                    <span class="project"><img src="{% static 'images/absent.svg' %}"
+                                                            alt=""></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="online-option">
+                                                <div class="days-first-col">
+                                                    <span class="days-count text-danger fs-2">10</span><br>
+                                                    <span class="days-text fs-6">Absenties in Office</span>
+                                                    <span>
+
+                                                    </span>
+                                                </div>
+                                                <div class="elips">
+                                                    <img src="{% static 'images/elips.png' %}" alt="elips">
+                                                    <span class="project"><img src="{% static 'images/absent.svg' %}"
+                                                            alt=""></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </center>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="marketings">
+                                <div class="marketing">
+                                    <div class="">
+                                        <span class="fs-5">Live Marketing Campaign</span><br>
+                                        <span class="fs-6">From Jan 1 to Jan 15</span>
+                                    </div>
+                                    <div class="wirless-img">
+                                        <img src="{% static 'images/wireless.svg' %}" alt="wireless-img">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="chart mt-5">
+                                            <div class="chart-map">
+                                                <canvas id="myChart" style="width:100%; height: 35vh;"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="chart-name">
+                                            <div class="box"></div>
+                                            <span class="fs-5">Facebook</span>
+                                        </div>
+                                        <div class="chart-name">
+                                            <div class="box2"></div>
+                                            <span class="fs-5">Thangam theatre</span>
+                                        </div>
+                                        <div class="chart-name">
+                                            <div class="box3"></div>
+                                            <span class="fs-5">Instagram</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="target">
+                                <div class="target-first-text">
+                                    <p class="">Sales target</p>
+                                    <p>Jan 1 to 15</p>
+                                </div>
+                                <center>
+                                    <div class="sales-charts">
+                                        <canvas id="myChart2" style="width:200px;height: 200px;"></canvas>
+                                    </div>
+                                </center>
+                                <div class="sales-chart">
+                                    <div class="income">
+                                        <div class="target-achive">
+                                            <span class="target-line">Income
+                                                <img src="{% static 'images/income-arrow.svg' %}" alt=""> <span
+                                                    class="text-success">100%</span>
+                                            </span>
+                                            <span class="target-line  text-success">Target achieved</span>
+                                        </div>
+                                        <div class="target-achive">
+                                            <span class="target-line">Income
+                                                <img src="{% static 'images/income-arrow.svg' %}" alt=""><span
+                                                    class="text-danger">10%</span>
+                                            </span>
+                                            <span class="target-line  text-danger">Not yet achieved</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="third-row">
+                    <div class="date-time">
+                        <div class="time mt-4">
+                            <img src="{% static 'images/time.svg' %}" alt="time">
+                            <span class="text-white">3:56 pm</span>
+                        </div>
+                        <div class="date mt-4">
+                            <img src="{% static 'images/dates.svg' %}" alt="date"><span
+                                class="text-white">22.10.2022</span>
+                        </div>
+                    </div>
+                    <div class="third-top ">
+                        <div class="invertor">
+                            <p>
+                                <img src="{% static 'images/electricty.svg' %}" alt="">
+                            </p>
+                            <p class="electric">
+                                <img src="{% static 'images/electricbar.svg' %}" alt=""><b>Electricity</b>
+                            </p>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-9">
+                                <span class="text-white ">Inverter Battery percentage:</span>
+                            </div>
+                            <div class="col-md-3">
+                                <canvas id="myChart3" style="width:50%;height: 50%;"></canvas>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="energy-consumption mt-4">
+                        <div class="energy-text px-3">
+                            <p class="consumption">
+                                <span class="energy-consump-1"><img src="{% static 'images/consumptions.svg'%}" alt="">
+                                    Energy Consumption Chart</span><br>
+                                <span class="energy-consump-2">Input Voltage level</span>
+                            </p>
+                        </div>
+                        <div class="gauge-chart">
+                            <div class="row mb-4">
+                                <div class="col-md-4">
+                                    <canvas id="oilChart" height="100%" width="100%"></canvas>
+                                    <center>230v</center>
+                                </div>
+                                <div class="col-md-4">
+                                    <canvas id="oilChart2" height="100%" width="100%"></canvas>
+                                    <center>230v</center>
+                                </div>
+                                <div class="col-md-4">
+                                    <canvas id="oilChart3" height="100%" width="100%"></canvas>
+                                    <center>230v</center>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <span class="energy-consump-2 px-4 fs-6">Current Consumption</span>
+                        <div class="progress-watts">
+                            <progress id="file" value="71" max="100" class="bg-warning"> </progress>
+                            <label for="file1">7.1 Amps</label>
+
+                        </div>
+                        <div class="progress-watts">
+                            <progress id="file2" value="62" max="100"></progress>
+                            <label for="file2">6.2 Amps</label>
+                        </div>
+                        <div class="progress-watts">
+                            <progress id="file3" value="74" max="100"></progress>
+                            <label for="file3">7.4 Amps</label>
+                        </div>
+                        <div class="row d-flex align-items-center current-watts mt-4">
+
+                            <div class="col-md-9">
+                                <span class="energy-consump-2 px-4">Power Consumption</span>
+                                <canvas id="line-chart"></canvas>
+                            </div>
+                            <div class="col-md-3">
+
+                                <span class="current-watts-text ">Todays Watt</span>
+                                <span class="">1200 W</span>
+                                <span class="">7000 W</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mx-2">
+            <div class="col-md-9">
+                <div class="row py-3">
+                    <div class="col-md-2">
+                        <div class="last-row new-leads">
+                            <div class="leads">
+                                <span class="text-dark">New Leads</span><br>
+                                <span class="">32.00</span><br>
+                                <span class="text-dark">+32</span>
+                            </div>
+                            <div class="lead-img">
+                                <img src="{% static 'images/leads-img.svg' %}" alt="lead-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="last-row visits">
+                            <div class="leads">
+                                <span class="text-dark">Visits</span><br>
+                                <span class="">32.00</span><br>
+                                <span class="text-dark">+32</span>
+                            </div>
+                            <div class="lead-img">
+                                <img src="{% static 'images/visits.svg' %}" alt="lead-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="last-row total-quotations">
+                            <div class="leads">
+                                <span class="text-dark">Total Quatations</span><br>
+                                <span class="">32.00</span><br>
+                                <span class="text-dark">+32</span>
+                            </div>
+                            <div class="lead-img">
+                                <img src="{% static 'images/total-qouations.svg' %}" alt="lead-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="last-row total-invoice">
+                            <div class="leads">
+                                <span class="text-dark">Total Invoices</span><br>
+                                <span class="">32.00</span><br>
+                                <span class="text-dark">+32</span>
+                            </div>
+                            <div class="lead-img">
+                                <img src="{% static 'images/total-invoice.svg' %}" alt="lead-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="last-row pending-installations">
+                            <div class="leads">
+                                <span class="text-dark">Pending Installations</span><br>
+                                <span class="">32.00</span><br>
+                                <span class="text-dark">+32</span>
+                            </div>
+                            <div class="lead-img">
+                                <img src="{% static 'images/pending-installations.svg' %}" alt="lead-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="last-row pr-total">
+                            <div class="leads">
+                                <span class="text-dark">Pr Total Points</span><br>
+                                <span class="">32.00</span><br>
+                                <span class="text-dark">+32</span>
+                            </div>
+                            <div class="lead-img">
+                                <img src="{% static 'images/pr-total-points.svg' %}" alt="lead-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="data-usage">
+                    <div class="row ">
+                        <p class="data-usage-text">Data Usages</p>
+                    </div>
+
+                    <center>
+                        <div class="device first-device">
+                            <div class="device-img">
+                                <img src="{% static 'images/device.svg' %}" alt="device">
+                                <span class="mx-2  text-device">Devices Connected</span>
+                            </div>
+                            <div class="">
+                                <span class="data-text">26</span>
+                            </div>
+                        </div>
+                        <div class="device">
+                            <div class="device-img">
+                                <img src="{% static 'images/total-data-usage.svg' %}" alt="device">
+                                <span class="mx-2 text-device ">Total data usage </span>
+                            </div>
+                            <div class="">
+                                <span class="data-text">246 GB</span>
+                            </div>
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- bootstrap js -->
+        <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+        <!-----------------------marketing chart   ---------------  -->
+        <script>
+            var xValues = ["Facebook", "Thangam theatre", "Instagram"];
+            var yValues = [46, 32, 22];
+            var barColors = [" #1873EB", "#22C55E", "  #E74444"];
+
+            new Chart("myChart", {
+                type: "bar",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                    }]
+                },
+                options: {
+                    legend: { display: false },
+                    title: {
+                        display: true,
+
+                    }
+                }
+            });
+        </script>
+
+        <!-- sales chart  -->
+
+        <script>
+            var xValues = [];
+            var yValues = [80, 30,];
+            var barColors = [
+                "#22C55E",
+                "#EF4444"
+
+            ];
+
+            new Chart("myChart2", {
+                type: "doughnut",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                    }]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: ""
+                    }
+                }
+            });
+        </script>
+        <!-- electricty chart -->
+
+        <script>
+            var xValues = [];
+            var yValues = [50, 50,];
+            var barColors = [
+                "#D2DD06",
+                ""
+
+            ];
+
+            new Chart("myChart3", {
+                type: "doughnut",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                    }]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: ""
+                    }
+                }
+            });
+        </script>
+
+
+        <!-- gauge-meter -->
+
+
+        <script>
+            new Chart('oilChart', {
+                type: 'doughnut',
+                plugins: [{
+                    afterDraw: chart => {
+                        var needleValue = chart.chart.config.data.datasets[0].needleValue;
+                        var dataTotal = chart.chart.config.data.datasets[0].data.reduce((a, b) => a + b, 0);
+                        var angle = Math.PI + (1 / dataTotal * needleValue * Math.PI);
+                        var ctx = chart.chart.ctx;
+                        var cw = chart.chart.canvas.offsetWidth;
+                        var ch = chart.chart.canvas.offsetHeight;
+                        var cx = cw / 2;
+                        var cy = ch - 6;
+
+                        ctx.translate(cx, cy);
+                        ctx.rotate(angle);
+                        ctx.beginPath();
+                        ctx.moveTo(0, -3);
+                        ctx.lineTo(ch - 20, 0);
+                        ctx.lineTo(0, 3);
+                        ctx.fillStyle = 'rgb(0, 0, 0)';
+                        ctx.fill();
+                        ctx.rotate(-angle);
+                        ctx.translate(-cx, -cy);
+                        ctx.beginPath();
+                        ctx.arc(cx, cy, 5, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+                }],
+                data: {
+                    labels: [],
+                    datasets: [{
+                        data: [35],
+                        needleValue: 23,
+                        backgroundColor: [
+                            ' #EF4444',
+
+                        ]
+                    }]
+                },
+                options: {
+                    layout: {
+                        padding: {
+                            bottom: 1
+                        }
+                    },
+                    rotation: -Math.PI,
+                    cutoutPercentage: 30,
+                    circumference: Math.PI,
+                    legend: {
+                        position: 'left'
+                    },
+                    animation: {
+                        animateRotate: false,
+                        animateScale: true
+                    }
+                }
+            });
+        </script>
+
+        <!-- chart2 -->
+        <script>
+            new Chart('oilChart2', {
+                type: 'doughnut',
+                plugins: [{
+                    afterDraw: chart => {
+                        var needleValue = chart.chart.config.data.datasets[0].needleValue;
+                        var dataTotal = chart.chart.config.data.datasets[0].data.reduce((a, b) => a + b, 0);
+                        var angle = Math.PI + (1 / dataTotal * needleValue * Math.PI);
+                        var ctx = chart.chart.ctx;
+                        var cw = chart.chart.canvas.offsetWidth;
+                        var ch = chart.chart.canvas.offsetHeight;
+                        var cx = cw / 2;
+                        var cy = ch - 6;
+
+                        ctx.translate(cx, cy);
+                        ctx.rotate(angle);
+                        ctx.beginPath();
+                        ctx.moveTo(0, -3);
+                        ctx.lineTo(ch - 20, 0);
+                        ctx.lineTo(0, 3);
+                        ctx.fillStyle = 'rgb(0, 0, 0)';
+                        ctx.fill();
+                        ctx.rotate(-angle);
+                        ctx.translate(-cx, -cy);
+                        ctx.beginPath();
+                        ctx.arc(cx, cy, 5, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+                }],
+                data: {
+                    labels: [],
+                    datasets: [{
+                        data: [35],
+                        needleValue: 18,
+                        backgroundColor: [
+                            ' #FFC90B',
+
+                        ]
+                    }]
+                },
+                options: {
+                    layout: {
+                        padding: {
+                            bottom: 1
+                        }
+                    },
+                    rotation: -Math.PI,
+                    cutoutPercentage: 30,
+                    circumference: Math.PI,
+                    legend: {
+                        position: 'left'
+                    },
+                    animation: {
+                        animateRotate: false,
+                        animateScale: true
+                    }
+                }
+            });
+        </script>
+        <!-- chart3 -->
+        <script>
+            new Chart('oilChart3', {
+                type: 'doughnut',
+                plugins: [{
+                    afterDraw: chart => {
+                        var needleValue = chart.chart.config.data.datasets[0].needleValue;
+                        var dataTotal = chart.chart.config.data.datasets[0].data.reduce((a, b) => a + b, 0);
+                        var angle = Math.PI + (1 / dataTotal * needleValue * Math.PI);
+                        var ctx = chart.chart.ctx;
+                        var cw = chart.chart.canvas.offsetWidth;
+                        var ch = chart.chart.canvas.offsetHeight;
+                        var cx = cw / 2;
+                        var cy = ch - 6;
+
+                        ctx.translate(cx, cy);
+                        ctx.rotate(angle);
+                        ctx.beginPath();
+                        ctx.moveTo(0, -3);
+                        ctx.lineTo(ch - 20, 0);
+                        ctx.lineTo(0, 3);
+                        ctx.fillStyle = 'rgb(0, 0, 0)';
+                        ctx.fill();
+                        ctx.rotate(-angle);
+                        ctx.translate(-cx, -cy);
+                        ctx.beginPath();
+                        ctx.arc(cx, cy, 5, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+                }],
+                data: {
+                    labels: [],
+                    datasets: [{
+                        data: [55],
+                        needleValue: 34,
+                        backgroundColor: [
+                            ' #4880FD',
+
+                        ]
+                    }]
+                },
+                options: {
+                    layout: {
+                        padding: {
+                            bottom: 1
+                        }
+                    },
+                    rotation: -Math.PI,
+                    cutoutPercentage: 30,
+                    circumference: Math.PI,
+                    legend: {
+                        position: 'left'
+                    },
+                    animation: {
+                        animateRotate: false,
+                        animateScale: true
+                    }
+                }
+            });
+        </script>
+
+        <!-- current watts chart -->
+        <script>
+            let ctx = document.getElementById("line-chart").getContext('2d');
+
+            var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
+            gradientStroke.addColorStop(0, "#8956F8");
+            gradientStroke.addColorStop(1, "#8956F8");
+
+            var gradientBkgrd = ctx.createLinearGradient(0, 100, 0, 400);
+            gradientBkgrd.addColorStop(0, "rgba(244,94,132,0.2)");
+            gradientBkgrd.addColorStop(1, "rgba(249,135,94,0)");
+
+            let draw = Chart.controllers.line.prototype.draw;
+            Chart.controllers.line = Chart.controllers.line.extend({
+                draw: function () {
+                    draw.apply(this, arguments);
+                    let ctx = this.chart.chart.ctx;
+                    let _stroke = ctx.stroke;
+                    ctx.stroke = function () {
+                        ctx.save();
+                        //ctx.shadowColor = 'rgba(244,94,132,0.8)';
+                        ctx.shadowBlur = 8;
+                        ctx.shadowOffsetX = 0;
+                        ctx.shadowOffsetY = 6;
+                        _stroke.apply(this, arguments)
+                        ctx.restore();
+                    }
+                }
+            });
+
+
+
+
+            var chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'line',
+
+                // The data for our dataset
+                data: {
+                    labels: ["Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr"],
+                    datasets: [{
+                        label: "Income",
+                        backgroundColor: gradientBkgrd,
+                        borderColor: gradientStroke,
+                        data: [5500, 2500, 10000, 6000, 14000, 1500, 7000, 20000],
+                        pointBorderColor: "rgba(255,255,255,0)",
+                        pointBackgroundColor: "rgba(255,255,255,0)",
+                        pointBorderWidth: 0,
+                        pointHoverRadius: 8,
+                        pointHoverBackgroundColor: gradientStroke,
+                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                        pointHoverBorderWidth: 4,
+                        pointRadius: 1,
+                        borderWidth: 5,
+                        pointHitRadius: 16,
+                    }]
+                },
+
+                // Configuration options go here
+                options: {
+                    tooltips: {
+                        backgroundColor: '#fff',
+                        displayColors: false,
+                        titleFontColor: '#000',
+                        bodyFontColor: '#000'
+
+                    },
+                    legend: {
+                        display: false
+                    },
+                    scales: {
+                        xAxes: [{
+                            gridLines: {
+                                display: false
+                            }
+                        }],
+                        yAxes: [{
+                            ticks: {
+                                // Include a dollar sign in the ticks
+                                callback: function (value, index, values) {
+                                    return (value / 1000) + 'K';
+                                }
+                            }
+                        }],
+                    }
+                }
+            });
+        </script>
+        <!-- bootstrap js -->
+</body>
+
+</html>

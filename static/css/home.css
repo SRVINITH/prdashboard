@@ -1,0 +1,726 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.first-row,
+.second-row,
+.thired-row {
+    color: #fff;
+}
+
+.first-row p {
+    font-size: 12px;
+}
+
+.staff-main {
+    max-height: 650px;
+    overflow-y: scroll;
+}
+
+.staff-main::-webkit-scrollbar {
+    display: none;
+}
+
+.staffrepresent {
+    width: 100%;
+    height: 100%;
+    background: #091532;
+    border-radius: 16px;
+    margin-top: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+.staffrepresent2 {
+    width: 100%;
+    height: 90px;
+    background: #091532;
+    border-radius: 16px;
+    margin-top: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+}
+.sdf{
+    position: relative;
+}
+.sdf span{
+    position: absolute;
+}
+
+.staff-dp {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.staff-dp img {
+    position: relative;
+    width: 60px;
+}
+
+.staff-dp span {
+    position: absolute;
+    left: 40px;
+    width: 10px;
+    bottom: 18px;
+}
+
+.staff-name {
+    line-height: 50px;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+.points span {
+    font-size: 14px;
+}
+
+.points .rateing img {
+    width: 15px;
+}
+
+.dashboard {
+    font-size: 14px;
+    color: #f2f2f2;
+}
+
+.days-calculation {
+    width: 100%;
+    height: 130px;
+    background: #091532;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    position: relative;
+}
+.con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.text-point {
+    color: #22C55E;
+    margin: 0px 4px;
+}
+
+.days-count {
+    font-size: 14px;
+    text-align: left;
+    font-weight: bold;
+    color: #21FF0D;
+}
+
+.days .elips img {
+    width: 10px;
+
+}
+
+.elips {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* display: none; */
+
+}
+
+.days-text {
+    font-size: 8px;
+    color: #ccc;
+}
+
+.progress {
+    max-height: 3px;
+}
+
+.project img {
+    position: absolute;
+    width: 40px;
+    margin-left: -40px;
+    margin-top: -18px;
+
+}
+
+.marketings {
+    width: 100%;
+    height: 530px;
+    background: #091532;
+    border-radius: 16px;
+    padding: 10px;
+
+}
+
+.marketing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wirless-img {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background: linear-gradient(180deg, #D1DD06 0%, #B8E806 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wirless-img img {
+    width: 60%;
+    height: 60%;
+}
+
+.marketings :last-child {
+    font-size: 10px;
+}
+
+.target {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background: #091532;
+    border-radius: 16px;
+}
+
+.invertor {
+    padding-top: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.invertor img {
+    width: 20px;
+}
+
+.electric {
+    width: 128px;
+    height: 28px;
+    background: linear-gradient(180deg, #B8E706 0%, #31C754 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.electric img {
+    width: 15px;
+    margin-left: 10px;
+}
+
+.onliedot {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    border: 1px solid black;
+    margin: 0px 10px;
+}
+
+.act-online {
+    font-size: 14px;
+}
+
+
+
+/* --third------ */
+.date-time {
+    display: flex;
+    align-items: center !important;
+    justify-content: space-between;
+}
+
+.time svg {
+    width: 20px;
+    margin: 0px 5px;
+}
+
+.date svg {
+    width: 20px;
+}
+
+.third-top {
+    width: 100%;
+    height: 120px;
+    background: #091532;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 19px;
+    padding: 0px 10px;
+    margin-top: 20px;
+}
+
+.invertor-consume {
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 128px;
+    height: 28px;
+}
+
+.invertor-consume:hover,
+.act-inverter {
+    background: linear-gradient(180deg, #EA4444 0%, #EC4444 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    color: #000;
+
+}
+
+.invertor-consume span {
+    padding-left:5pxpx;
+}
+
+.invertor-battery {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 20px;
+    margin-top: -75px;
+}
+
+.invertor-battery p {
+    font-size: 12px;
+}
+
+.energy-consumption {
+    width: 100%;
+    height: 680px;
+    background: #091532;
+    border-radius: 11px;
+    color: #fff;
+    /* display: flex; */
+    /* align-items: center; */
+}
+
+#myChart3 {
+    margin-top: -50px;
+
+}
+
+.energy {
+    /* width: 100%;
+    height: 100%; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    left: 8px;
+    top: 8px;
+    position: relative;
+    background: linear-gradient(180deg, #D1DD06 0%, #B8E806 100%);
+}
+
+.energy svg {
+    width: 5px;
+    position: absolute;
+    text-align: center;
+    margin: 0px 5px;
+}
+
+.energy-consump-1 {
+    font-size: 17px;
+}
+.energy-consump-1 img{
+    width: 15px !important;
+    height: 15px;
+    background: linear-gradient(180deg, #D1DD06 0%, #B8E806 100%);
+    border-radius: 100%;
+    
+}
+
+.energy-consump-2 {
+    font-size: 14px;
+    margin-top: 100px;
+}
+
+.battery-canvas {
+    margin-top: -100px;
+}
+
+.invertor-name {
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+/* .chart{
+    height: 100%;
+    position: relative;
+} */
+.chart-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.new-rows {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box {
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    background-color: #1873EB;
+}
+
+.box2 {
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    background-color: #21FF0D;
+}
+
+.box3 {
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    background: linear-gradient(179.97deg, #545BCA 0.02%, #8E42B3 44.14%, #D8416C 104.11%, #EF7D43 125.57%, #4E6FE4 142.16%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    transform: matrix(1, 0.01, -0.01, 1, 0, 0);
+}
+
+.target-first-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.target-first-text p {
+    font-size: 20px;
+    margin: 0px 20px;
+
+}
+
+.sales-charts {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.darget-achive {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.target-line {
+    font-size: 18px;
+
+}
+
+#myplot {
+    background-color: red;
+    margin-left: 0px;
+}
+
+.electric {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.online-option {
+    width: 100%;
+    height: 130px;
+    background: #091532;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    position: relative;
+    margin: 10px auto;
+}
+
+/* ----last row-------- */
+.last-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 130px;
+    border-radius: 20px;
+}
+
+.new-leads {
+    background: linear-gradient(168.35deg, #E95065 13.32%, #E0E0E0 178.96%);
+
+}
+
+.visits {
+    background: linear-gradient(139.75deg, #46BDDF 22.92%, #FFFFFF 130.25%);
+}
+
+.total-quotations {
+    background: linear-gradient(150.33deg, #E57255 18.15%, #FFFFFF 156.69%);
+}
+
+.total-invoice {
+    background: linear-gradient(175.61deg, #6A3DB8 3.56%, #D3D3D3 162.04%);
+}
+
+.pending-installations {
+    background: linear-gradient(168.35deg, #F97316 13.32%, #E0E0E0 178.96%);
+}
+
+.pr-total {
+    background: linear-gradient(114.05deg, #FFD84D -0.54%, #ADA073 141.35%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.lead-img img {
+    width: 40px;
+}
+
+.leads :nth-child(1) {
+    font-size: 16x;
+    font-weight: bold;
+}
+
+.leads :nth-child(2) {
+    font-size: 15px !important;
+}
+
+.data-usage {
+    width: 100%;
+    height: 130px;
+    background: #091532;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 19px;
+    color: #fff;
+    margin-top: 23px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+
+}
+
+.wifis img {
+    background-color: #21FF0D;
+    padding: 3px;
+    border-radius: 100%;
+    width: fit-content;
+
+
+}
+
+.data-usage-text {
+    color: #fff;
+    margin-left: 30px;
+    padding-top: 20px;
+    font-size: 17px;
+
+    /* width: 100%; */
+
+}
+
+.data-usage-text img {
+    padding: 10px;
+}
+
+.device {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+.device-img img {
+    width: 15px;
+}
+
+.text-device {
+    font-size: 18px;
+}
+
+.sf span {
+    font-size: 38px;
+    color: #fff;
+
+
+}
+
+.sf {
+    position: relative;
+
+}
+
+/* chart js gaugae */
+.chartjs-wrapper {
+    width: 6vw;
+    margin-top: -20px;
+    padding: 0px 2px;
+}
+
+.cdf img {
+    width: 50px;
+}
+
+.sf p {
+    font-size: 16px;
+}
+
+.hum-img img {
+    width: 24px;
+    position: absolute;
+}
+
+.er {
+    margin-top: -20px;
+}
+
+.chart-text {
+    padding-left: 20px;
+}
+
+.current-head {
+    font-size: 12px;
+    padding-top: -200px;
+}
+
+.charts5 {
+    padding: 0px 10px;
+}
+
+.time img {
+    width: 25px;
+}
+
+.date img {
+    width: 25px;
+}
+
+.staff-online {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    border: 1px solid black;
+}
+
+.active {
+    background-color: #21FF0D;
+}
+
+.atvisit {
+    background-color: #FC8C29;
+}
+
+.offline {
+    background-color: #EF4444;
+}
+
+
+/* gauge */
+/* .gauge-chart{
+    margin-top: -35px;
+} */
+
+/* gauge */
+.progress-watts {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+
+#line-chart {
+
+    padding: 0px 10px;
+    width: 100%;
+    height: 13vh;
+}
+
+.current-watts-text {
+    font-size: 11px;
+
+}
+
+.current-watts {
+    margin-top: 200px;
+}
+
+.online-options {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.consumption-1 img {
+    width: 15px;
+    background-color: #B8E706 !important;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 3px;
+}
+
+.consumption img {
+    width: 20px;
+
+}
+
+
+progress {
+    border: none;
+    width: 200px;
+    height: 15px;
+    background: crimson;
+}
+
+progress {
+    color: lightblue;
+}
+
+progress::-webkit-progress-value {
+    background: #E74444;
+}
+
+#file2::-webkit-progress-value {
+    background: #FFC90B;
+}
+
+#file3::-webkit-progress-value {
+    background: #4880FD;
+}
+
+progress::-moz-progress-bar {
+    background: transparent;
+}
