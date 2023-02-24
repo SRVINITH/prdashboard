@@ -384,8 +384,12 @@ body {
 }
 .fg{
     position: absolute;
+    z-index: 10;
+    color: #000;
 }
-#my
+#mychart3{
+    position: relative;
+}
 
 .energy-consump-2 {
     font-size: 17px;
