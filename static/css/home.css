@@ -353,7 +353,15 @@ body {
 
 #myChart3 {
     margin-top: -50px;
+    position: relative;
 
+}
+.cent-text{
+    position: absolute;
+    z-index: 100;
+    margin-top: -40px;
+    margin-left: 15px;
+    font-size: 13px;
 }
 
 .energy {
