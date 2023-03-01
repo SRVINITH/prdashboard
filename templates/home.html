@@ -628,8 +628,7 @@
                                 <span class="days-text fs-6">days left for project dobby</span>
                                 <span>
                                     <div class="progress mt-2">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 75%;"
-                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </span>
                             </div>
@@ -646,8 +645,7 @@
                                 <span class="days-text fs-6">days left for project dobby</span>
                                 <span>
                                     <div class="progress mt-2">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 75%;"
-                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </span>
                             </div>
@@ -675,13 +673,14 @@
                     <div class="col-md-2">
                         <div class="con">
                             <div class="d-flex align-items-center justify-content-between">
-                                <span class="deg">{{adminRoomTemp}}&#176;</span>
+                                <span class="deg" id="adminRoomTemp">{{adminRoomTemp}}&#176;</span>
                                 <img src="{% static 'images/sdf.svg' %}" alt="" class="ef">
                             </div>
                             <div class="d-flex align-items-center justify-content-between">
-                                <p class="d-flex align-items-center justify-content-between"> <span><img
-                                            src="{%static 'images/wr.svg' %}" alt="" class="df"><span
-                                            class="hum">{{adminRoomHum}}%</span></p>
+                                <p class="d-flex align-items-center justify-content-between">
+                                    <img src="{%static 'images/wr.svg' %}" alt="" class="df">
+                                    <span class="hum" id="adminRoomHum">{{adminRoomHum}}%</span>
+                                </p>
                                 <p class="admin">Admin Room</p>
                             </div>
 
@@ -690,19 +689,18 @@
                 </div>
             </div>
             <div class="col-md-3">
-
                 <div class="row" style="margin-top: 26px;">
-
                     <div class="col">
                         <div class="con">
                             <div class="d-flex align-items-center justify-content-between">
-                                <span class="deg">{{greenRoomTemp}}&#176;</span>
+                                <span class="deg" id="greenRoomTemp">{{greenRoomTemp}}&#176;</span>
                                 <img src="{% static 'images/greens.svg' %}" alt="" class="ef">
                             </div>
                             <div class="d-flex align-items-center justify-content-between">
-                                <p class="d-flex align-items-center justify-content-between"> <span><img
-                                            src="{%static 'images/wr.svg' %}" alt="" class="df"><span
-                                            class="hum">{{greenRoomHum}}%</span></p>
+                                <p class="d-flex align-items-center justify-content-between">
+                                    <img src="{%static 'images/wr.svg' %}" alt="" class="df">
+                                    <span class="hum" id="greenRoomHum">{{greenRoomHum}}%</span>
+                                </p>
                                 <p class="admin">Green Room</p>
                             </div>
                         </div>
@@ -710,37 +708,56 @@
                     <div class="col">
                         <div class="con">
                             <div class="d-flex align-items-center justify-content-between">
-                                <span class="deg">{{garageRoomTemp}}&#176;</span>
+                                <span class="deg" id="garageRoomTemp">{{garageRoomTemp}}&#176;</span>
                                 <img src="{% static 'images/garage.svg' %}" alt="" class="ef">
                             </div>
                             <div class="d-flex align-items-center justify-content-between">
-                                <p class="d-flex align-items-center justify-content-between"> <span><img
-                                            src="{%static 'images/wr.svg' %}" alt="" class="df"><span
-                                            class="hum">{{garageRoomHum}}%</span></p>
+                                <p class="d-flex align-items-center justify-content-between">
+                                    <img src="{%static 'images/wr.svg' %}" alt="" class="df">
+                                    <span class="hum" id="garageRoomHum">{{garageRoomHum}}%</span>
+                                </p>
                                 <p class="admin">Garage Room</p>
                             </div>
-
                         </div>
                     </div>
-
-
                 </div>
-
             </div>
         </div>
-
-        <script>
-
-        </script>
 
         <!-- bootstrap js -->
         <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
         <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/ajax.js' %}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
         <script type="text/javascript"
             src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
         <!-----------------------  marketing chart  ----------------->
+        <script>
+            $(document).ready(function () {
+            setInterval(function () {
+            $.ajax({
+                type: "GET",
+                url: "/ajax",
+                success: function (response) {
+                    adminRoomTemp = document.getElementById("adminRoomTemp").innerHTML
+                    adminRoomHum = document.getElementById("adminRoomHum").innerHTML
+                    greenRoomTemp = document.getElementById("greenRoomTemp").innerHTML
+                    greenRoomHum = document.getElementById("greenRoomHum").innerHTML
+                    garageRoomTemp = document.getElementById("garageRoomTemp").innerHTML
+                    garageRoomHum = document.getElementById("garageRoomHum").innerHTML
+                    console.log('response ', response)
+                    adminRoomTemp = response.adminRoomTemp
+                    adminRoomHum = response.adminRoomHum
+                    greenRoomTemp = response.greenRoomTemp
+                    greenRoomHum = response.greenRoomHum
+                    garageRoomTemp = response.garageRoomTemp
+                    garageRoomHum = response.garageRoomHum
+                },
+            });
+            }, 1000);
+        });
+        </script>
         <script>
             var xValues = ["Facebook", "Thangam theatre", "Instagram"];
             var yValues = [46, 32, 22];
