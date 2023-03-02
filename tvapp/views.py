@@ -17,9 +17,9 @@ def ajax(request):
     garageRoomTemp = 0
     garageRoomHum = 0
     try:
-        a = requests.get("http://192.168.1.16:8182/temp").json() #static ip
+        a = requests.get("http://192.168.1.18:8182/temp").json() #static ip
     except:
-        a = requests.get("http://192.168.1.16:8182/temp").json() # local ip
+        a = requests.get("http://192.168.1.18:8182/temp").json() # local ip
 
     for i in a:
         if i["room"] == "admin room":
