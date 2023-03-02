@@ -41,4 +41,5 @@ def ajax(request):
         "garageRoomTemp": garageRoomTemp,
         "garageRoomHum": garageRoomHum
     }
+    print(context)
     return JsonResponse(context)

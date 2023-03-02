@@ -673,13 +673,13 @@
                     <div class="col-md-2">
                         <div class="con">
                             <div class="d-flex align-items-center justify-content-between">
-                                <span class="deg" id="adminRoomTemp">{{adminRoomTemp}}&#176;</span>
+                                <span class="deg"><span id="adminRoomTemp"></span>&#176;</span>
                                 <img src="{% static 'images/sdf.svg' %}" alt="" class="ef">
                             </div>
                             <div class="d-flex align-items-center justify-content-between">
                                 <p class="d-flex align-items-center justify-content-between">
                                     <img src="{%static 'images/wr.svg' %}" alt="" class="df">
-                                    <span class="hum" id="adminRoomHum">{{adminRoomHum}}%</span>
+                                    <span class="hum"><span id="adminRoomHum"></span>%</span>
                                 </p>
                                 <p class="admin">Admin Room</p>
                             </div>
@@ -693,13 +693,13 @@
                     <div class="col">
                         <div class="con">
                             <div class="d-flex align-items-center justify-content-between">
-                                <span class="deg" id="greenRoomTemp">{{greenRoomTemp}}&#176;</span>
+                                <span class="deg"><span id="greenRoomTemp"></span>&#176;</span>
                                 <img src="{% static 'images/greens.svg' %}" alt="" class="ef">
                             </div>
                             <div class="d-flex align-items-center justify-content-between">
                                 <p class="d-flex align-items-center justify-content-between">
                                     <img src="{%static 'images/wr.svg' %}" alt="" class="df">
-                                    <span class="hum" id="greenRoomHum">{{greenRoomHum}}%</span>
+                                    <span class="hum"><span id="greenRoomHum"></span>%</span>
                                 </p>
                                 <p class="admin">Green Room</p>
                             </div>
@@ -708,13 +708,13 @@
                     <div class="col">
                         <div class="con">
                             <div class="d-flex align-items-center justify-content-between">
-                                <span class="deg" id="garageRoomTemp">{{garageRoomTemp}}&#176;</span>
+                                <span class="deg"><span id="garageRoomTemp"></span>&#176;</span>
                                 <img src="{% static 'images/garage.svg' %}" alt="" class="ef">
                             </div>
                             <div class="d-flex align-items-center justify-content-between">
                                 <p class="d-flex align-items-center justify-content-between">
                                     <img src="{%static 'images/wr.svg' %}" alt="" class="df">
-                                    <span class="hum" id="garageRoomHum">{{garageRoomHum}}%</span>
+                                    <span class="hum"><span id="garageRoomHum"></span>%</span>
                                 </p>
                                 <p class="admin">Garage Room</p>
                             </div>
@@ -740,21 +740,15 @@
                 type: "GET",
                 url: "/ajax",
                 success: function (response) {
-                    adminRoomTemp = document.getElementById("adminRoomTemp").innerHTML
-                    adminRoomHum = document.getElementById("adminRoomHum").innerHTML
-                    greenRoomTemp = document.getElementById("greenRoomTemp").innerHTML
-                    greenRoomHum = document.getElementById("greenRoomHum").innerHTML
-                    garageRoomTemp = document.getElementById("garageRoomTemp").innerHTML
-                    garageRoomHum = document.getElementById("garageRoomHum").innerHTML
-                    adminRoomTemp = response.adminRoomTemp
-                    adminRoomHum = response.adminRoomHum
-                    greenRoomTemp = response.greenRoomTemp
-                    greenRoomHum = response.greenRoomHum
-                    garageRoomTemp = response.garageRoomTemp
-                    garageRoomHum = response.garageRoomHum
+                    document.getElementById("adminRoomHum").innerHTML = response.adminRoomHum
+                    document.getElementById("adminRoomTemp").innerHTML = response.adminRoomTemp
+                    document.getElementById("greenRoomHum").innerHTML = response.greenRoomHum
+                    document.getElementById("greenRoomTemp").innerHTML = response.greenRoomTemp
+                    document.getElementById("garageRoomHum").innerHTML = response.garageRoomHum
+                    document.getElementById("garageRoomTemp").innerHTML = response.garageRoomTemp
                 },
             });
-            }, 1000);
+            }, 5000);
         });
         </script>
         <script>
