@@ -2,7 +2,8 @@ from django.shortcuts import render
 import requests
 from django.http import JsonResponse
 from datetime import datetime
-# Create your views here.
+import pytz
+
 
 def home(request):
     return render(request,'home.html')
@@ -11,9 +12,10 @@ def home(request):
 def ajax(request):
     # localServerData = requests.get("http://192.168.1.16:8182/temp").json()
     # ebStatus = localServerData["EB_Status"]
-    currentTime = datetime.now().strftime("%-I:%M %p")
-    currentDate = datetime.now().strftime("")
-    print(currentTime)
+    newYorkTz = pytz.timezone("Asia/Kolkata") 
+    timeInNewYork = datetime.now(newYorkTz)
+    currentTime = timeInNewYork.strftime("%-I:%M %p")
+    currentDate = datetime.now().strftime("%d.%m.%Y")
     adminRoomTemp = 0
     adminRoomHum = 0
     greenRoomTemp = 0
@@ -38,6 +40,8 @@ def ajax(request):
             garageRoomTemp = i["temperature"]
             garageRoomHum = i["humidity"]
     context = {
+        "currentTime": currentTime,
+        "currentDate": currentDate,
         "adminRoomTemp": adminRoomTemp,
         "adminRoomHum": adminRoomHum,
         "greenRoomTemp": greenRoomTemp,

@@ -494,11 +494,11 @@
                     <div class="date-time">
                         <div class="time mt-4">
                             <img src="{% static 'images/time.svg' %}" alt="time">
-                            <span class="text-white date">3:56 pm</span>
+                            <span class="text-white date" id="currentTime"></span>
                         </div>
                         <div class="date mt-4">
                             <img src="{% static 'images/dates.svg' %}" alt="date"><span
-                                class="text-white date">22.10.2022</span>
+                                class="text-white date" id="currentDate"></span>
                         </div>
                     </div>
                     <div class="third-top ">
@@ -740,6 +740,8 @@
                 type: "GET",
                 url: "/ajax",
                 success: function (response) {
+                    document.getElementById("currentTime").innerHTML = response.currentTime
+                    document.getElementById("currentDate").innerHTML = response.currentDate
                     document.getElementById("adminRoomHum").innerHTML = response.adminRoomHum
                     document.getElementById("adminRoomTemp").innerHTML = response.adminRoomTemp
                     document.getElementById("greenRoomHum").innerHTML = response.greenRoomHum
