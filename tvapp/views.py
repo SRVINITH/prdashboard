@@ -1,6 +1,7 @@
 from django.shortcuts import render
 import requests
 from django.http import JsonResponse
+from datetime import datetime
 # Create your views here.
 
 def home(request):
@@ -10,6 +11,9 @@ def home(request):
 def ajax(request):
     # localServerData = requests.get("http://192.168.1.16:8182/temp").json()
     # ebStatus = localServerData["EB_Status"]
+    currentTime = datetime.now().strftime("%-I:%M %p")
+    currentDate = datetime.now().strftime("")
+    print(currentTime)
     adminRoomTemp = 0
     adminRoomHum = 0
     greenRoomTemp = 0
@@ -41,5 +45,4 @@ def ajax(request):
         "garageRoomTemp": garageRoomTemp,
         "garageRoomHum": garageRoomHum
     }
-    print(context)
     return JsonResponse(context)
