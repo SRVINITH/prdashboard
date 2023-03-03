@@ -209,7 +209,7 @@
                                             <div class="last-row total-quotations">
                                                 <div class="leads">
                                                     <span class="text-dark">Total Quatations</span><br>
-                                                    <span class="text-dark fs-4">32.00</span><br>
+                                                    <span class="text-dark fs-4" id="quotationCount"></span><br>
                                                     <span class="text-dark "><span class="dfh"><img
                                                                 src="{% static 'images/arr.svg' %}" alt=""></span>
                                                         <span class="xcc">+32</span>
@@ -226,7 +226,7 @@
                                             <div class="last-row total-invoice">
                                                 <div class="leads">
                                                     <span class="text-dark">Total Invoices</span><br>
-                                                    <span class="text-dark fs-4">32.00</span><br>
+                                                    <span class="text-dark fs-4" id="invoiceCount"></span><br>
                                                     <span class="text-dark"><span class="dfh"><img
                                                                 src="{% static 'images/arr.svg' %}" alt=""></span>
                                                         <span class="xcc">+32</span>
@@ -748,9 +748,11 @@
                     document.getElementById("greenRoomTemp").innerHTML = response.greenRoomTemp
                     document.getElementById("garageRoomHum").innerHTML = response.garageRoomHum
                     document.getElementById("garageRoomTemp").innerHTML = response.garageRoomTemp
+                    document.getElementById("quotationCount").innerHTML = response.quotationCount
+                    document.getElementById("invoiceCount").innerHTML = response.invoiceCount
                 },
             });
-            }, 5000);
+            }, 20000);
         });
         </script>
         <script>
@@ -776,8 +778,6 @@
                 }
             });
         </script>
-
-        <!-- sales chart  -->
 
         <script>
             var xValues = [];
@@ -809,66 +809,12 @@
                 }
             });
         </script>
-        <!-- electricty chart -->
-        <!-- new-electricity start -->
-        <!-- <script>
-            window.onload = function () {//from  w ww  .  j a v  a  2  s.com
-                var data = {
-                    labels: [
-                        "Electricity",
-                        
-                    ],
-                    datasets: [
-                        {
-                            data: [50,50],
-                            backgroundColor: [
-                                "#B8E806",
-                                "#B4A7A7"
-                            ],
-                            borderColor: [
-                                        '#091532','#B4A7A7'
-                                    ],
-                                   
-                            
-                        }]
-                };
-                var promisedDeliveryChart = new Chart(document.getElementById('myChart3'), {
-                    type: 'doughnut',
-                    data: data,
-                    options: {
-                        responsive: true,
-                        legend: {
-                            display: false
-                        }
-                    }
-                });
-                Chart.pluginService.register({
-                    beforeDraw: function (chart) {
-                        var width = chart.chart.width,
-                            height = chart.chart.height,
-                            ctx = chart.chart.ctx;
-                        ctx.restore();
-                        var fontSize = (height / 114).toFixed(2);
-                        ctx.font = fontSize + "em sans-serif";
-                        ctx.textBaseline = "middel";
-                       
-                    }
-                });
-            }
-        </script> -->
-        <!-- new-electricity end -->
 
         <script>
             var xValues = [];
             var yValues = [50, 50,];
-            var barColors = [
-                "#D2DD06",
-                "#B4A7A7"
-
-            ];
-            border: [
-                'none'
-            ],
+            var barColors = ["#D2DD06", "#B4A7A7"];
+            border: ['none'],
                 new Chart("myChart3", {
                     type: "doughnut",
                     data: {
