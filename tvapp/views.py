@@ -36,17 +36,16 @@ def ajax(request):
         a = requests.get("http://192.168.1.18:8182/temp").json() #static ip
     except:
         a = requests.get("http://192.168.1.18:8182/temp").json() # local ip
-
     for i in a:
-        if i["room"] == "admin room":
+        if i["room"] == "Admin Room":
             adminRoomTemp = i["temperature"]
             adminRoomHum = i["humidity"]
 
-        if i["room"] == "green room":
+        if i["room"] == "Green Room":
             greenRoomTemp = i["temperature"]
             greenRoomHum = i["humidity"]
 
-        if i["room"] == "garage":
+        if i["room"] == "Garage":
             garageRoomTemp = i["temperature"]
             garageRoomHum = i["humidity"]
     quote = db.child("QuotationAndInvoice").get().val()
