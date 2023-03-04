@@ -740,6 +740,7 @@
                 type: "GET",
                 url: "/ajax",
                 success: function (response) {
+                    console.log(response)
                     document.getElementById("currentTime").innerHTML = response.currentTime
                     document.getElementById("currentDate").innerHTML = response.currentDate
                     document.getElementById("adminRoomHum").innerHTML = response.adminRoomHum
