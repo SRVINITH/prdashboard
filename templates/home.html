@@ -20,10 +20,15 @@
             <div class="col-md-3">
                 <div class="first-row">
                     <div class="ftop mt-3">
-                        <h6 class="fs-5">November 1st Half</h6>
+                        {%if half == True%}
+                        <h6 class="fs-5">{{monthname}} 1st Half</h6>
+                        {%else%}
+                        <h6 class="fs-5">{{monthname}} 2st Half</h6>
+                        {%endif%}
                         <p class="f6">Top Sales Representative</p>
                     </div>
                     <div class="staff-main">
+                        {%for name in staffnamelist%}
                         <div class="staffrepresent">
                             <div class="staff-dp">
                                 <div class="">
@@ -31,7 +36,7 @@
                                     <span class="staff-online active"></span>
                                 </div>
                                 <div class="staff-name">
-                                    <p class="fs-5">AKHIL SANKAR K</p>
+                                    <p class="fs-5">{{name}}</p>
                                 </div>
                             </div>
                             <div class="points">
@@ -40,103 +45,8 @@
                                 <span class="rateing"> <img src="{% static 'images/rateing.svg' %}"
                                         alt="rateing"></span>
                             </div>
-                        </div>
-                        <div class="staffrepresent">
-                            <div class="staff-dp">
-                                <div class="">
-                                    <img src="{% static 'images/staff-dp.png' %}" alt="staff-dp">
-                                    <span class="staff-online active"></span>
-                                </div>
-                                <div class="staff-name">
-                                    <p class="fs-5">ANITHA K</p>
-                                </div>
-                            </div>
-                            <div class="points">
-                                <span class="text-point">43 Points</span>
-                                <span>+52 Points </span>
-                                <!-- <span class="rateing"> <img src="{% static 'images/rateing.svg' %}" alt="rateing" ></span> -->
-                            </div>
-                        </div>
-                        <div class="staffrepresent">
-                            <div class="staff-dp">
-                                <div class="">
-                                    <img src="{% static 'images/staff-dp.png' %}" alt="staff-dp">
-                                    <span class="staff-online active"></span>
-                                </div>
-                                <div class="staff-name">
-                                    <p class="fs-5">BALASARAVANAN S</p>
-                                </div>
-                            </div>
-                            <div class="points">
-                                <span class="text-point text-warning">43 Points</span>
-                                <span class="">+52 Points </span>
-                                <!-- <span class="rateing"> <img src="{% static 'images/rateing.svg' %}" alt="rateing" ></span> -->
-                            </div>
-                        </div>
-                        <div class="staffrepresent">
-                            <div class="staff-dp">
-                                <div class="">
-                                    <img src="{% static 'images/staff-dp.png' %}" alt="staff-dp">
-                                    <span class="staff-online atvisit"></span>
-                                </div>
-                                <div class="staff-name">
-                                    <p class="fs-5">GOWTHAM S</p>
-                                </div>
-                            </div>
-                            <div class="points">
-                                <span class="text-point text-warning ">43 Points</span>
-                                <span class="">+52 Points </span>
-                                <!-- <span class="rateing"> <img src="{% static 'images/rateing.svg' %}" alt="rateing" ></span> -->
-                            </div>
-                        </div>
-                        <div class="staffrepresent">
-                            <div class="staff-dp">
-                                <div class="">
-                                    <img src="{% static 'images/staff-dp.png' %}" alt="staff-bp">
-                                    <span class="staff-online atvisit"></span>
-                                </div>
-                                <div class="staff-name">
-                                    <p class="fs-5">JEEVA S</p>
-                                </div>
-                            </div>
-                            <div class="points">
-                                <span class="text-point text-warning ">43 Points</span>
-                                <span>+52 Points </span>
-                                <!-- <span class="rateing"> <img src="{% static 'images/rateing.svg' %}" alt="rateing" ></span> -->
-                            </div>
-                        </div>
-                        <div class="staffrepresent">
-                            <div class="staff-dp">
-                                <div class="">
-                                    <img src="{% static 'images/staff-dp.png' %}" alt="staff-dp">
-                                    <span class="staff-online offline"></span>
-                                </div>
-                                <div class="staff-name">
-                                    <p class="fs-5">JEEVANANDHAM N</p>
-                                </div>
-                            </div>
-                            <div class="points">
-                                <span class="text-point text-danger">43 Points</span>
-                                <span>+52 Points </span>
-                                <!-- <span class="rateing"> <img src="{% static 'images/rateing.svg' %}" alt="rateing" ></span> -->
-                            </div>
-                        </div>
-                        <div class="staffrepresent">
-                            <div class="staff-dp">
-                                <div class="">
-                                    <img src="{% static 'images/staff-dp.png' %}" alt="staff-dp">
-                                    <span class="staff-online offline"></span>
-                                </div>
-                                <div class="staff-name">
-                                    <p class="fs-5">SANKAR C</p>
-                                </div>
-                            </div>
-                            <div class="points">
-                                <span class="text-point text-danger">43 Points</span>
-                                <span>+52 Points </span>
-                                <!-- <span class="rateing"> <img src="{% static 'images/rateing.svg' %}" alt="rateing" ></span> -->
-                            </div>
-                        </div>
+                        </div>  
+                        {%endfor%}
                     </div>
                     <div class="staffrepresent2">
                         <center>
@@ -179,10 +89,10 @@
                                             <div class="last-row new-leads">
                                                 <div class="leads">
                                                     <span class="text-dark">New Leads</span><br>
-                                                    <span class="text-dark fs-4">32.00</span><br>
+                                                    <span class="text-dark fs-4">{{newleads}}</span><br>
                                                     <span class="text-dark "><span class="dfh"><img
                                                                 src="{% static 'images/arr.svg' %}" alt=""></span>
-                                                        <span class="xcc">+32</span>
+                                                        <span class="xcc">+{{newleads}}</span>
                                                     </span>
                                                 </div>
                                                 <div class="lead-img">
@@ -209,10 +119,10 @@
                                             <div class="last-row total-quotations">
                                                 <div class="leads">
                                                     <span class="text-dark">Total Quatations</span><br>
-                                                    <span class="text-dark fs-4" id="quotationCount"></span><br>
+                                                    <span class="text-dark fs-4" id="quotationCount">{{quotationcount}}</span><br>
                                                     <span class="text-dark "><span class="dfh"><img
                                                                 src="{% static 'images/arr.svg' %}" alt=""></span>
-                                                        <span class="xcc">+32</span>
+                                                        <span class="xcc">+{{quotationcount}}</span>
                                                     </span>
                                                 </div>
                                                 <div class="lead-img">
@@ -226,10 +136,10 @@
                                             <div class="last-row total-invoice">
                                                 <div class="leads">
                                                     <span class="text-dark">Total Invoices</span><br>
-                                                    <span class="text-dark fs-4" id="invoiceCount"></span><br>
+                                                    <span class="text-dark fs-4" id="invoiceCount">{{invoicecount}}</span><br>
                                                     <span class="text-dark"><span class="dfh"><img
                                                                 src="{% static 'images/arr.svg' %}" alt=""></span>
-                                                        <span class="xcc">+32</span>
+                                                        <span class="xcc">+{{invoicecount}}</span>
                                                     </span>
                                                 </div>
                                                 <div class="lead-img">
@@ -257,10 +167,10 @@
                                             <div class="last-row pr-total">
                                                 <div class="leads">
                                                     <span class="text-dark">Pr Total Points</span><br>
-                                                    <span class="text-dark fs-4">32.00</span><br>
+                                                    <span class="text-dark fs-4">{{totalpoints}}</span><br>
                                                     <span class="text-dark "><span class="dfh"><img
                                                                 src="{% static 'images/arr.svg' %}" alt=""></span>
-                                                        <span class="xcc">+32</span>
+                                                        <span class="xcc">+{{totalpoints}}</span>
                                                     </span>
                                                 </div>
                                                 <div class="lead-img">
@@ -494,11 +404,11 @@
                     <div class="date-time">
                         <div class="time mt-4">
                             <img src="{% static 'images/time.svg' %}" alt="time">
-                            <span class="text-white date" id="currentTime"></span>
+                            <span class="text-white date" id="currentTime">{{time}}</span>
                         </div>
                         <div class="date mt-4">
                             <img src="{% static 'images/dates.svg' %}" alt="date"><span
-                                class="text-white date" id="currentDate"></span>
+                                class="text-white date" id="currentDate">{{currentdate}}</span>
                         </div>
                     </div>
                     <div class="third-top ">
